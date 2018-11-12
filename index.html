@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Vue JS Contact Form" content="">
+    <meta name="Dani_Gamss" content="">
+
+    <title>Vue JS Drag and Drop Reorder</title>
+
+
+    <!-- vue photo gallery styles-->
+    <link rel="stylesheet" type="text/css" href="reorder.css" />
+
+
+</head>
+
+<body>    
+
+  <div id="master-container">
+      <div class='items-container'>
+        <div class="item-container"
+        v-for="(item, index) in items" 
+        @mousedown="dragMouseDown(index)"
+        :id="'item_' + index"
+        :class="{'being-hovered': currentlyHovered === index, 'currently-dragged': currentlyDragged === index}"
+        :key="item.id" 
+        :style="{'top': items[index].top, 'margin-left': marginLeft}"> 
+          {{ item.name }}  
+        </div>       
+      </div>
+  </div>
+
+
+  <!-- vue core -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.3/vue.js"></script>
+  <!-- vue photo gallery -->
+  <script src="data.js"></script>
+  <script src="reorder.js"></script>
+
+</body>
+
+</html>
