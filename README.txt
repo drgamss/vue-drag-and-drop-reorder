@@ -1,10 +1,6 @@
 
-* Dynamic datatable built with vue.js 2
-* Search by category functionality.
-* Sort by column.
-* Pagination
-* No jquery needed.
+* Dynamic drag and drop with reorder functionality.
+* Pure Vue.js - no plugins or jquery needed.
 * Using a regular script tag. no build tools used.
-* dependencies - bootstrap.css, vue.js 2 and lodash
 
 ENJOY :-)
